@@ -48,6 +48,7 @@ export default function App() {
       try {
         axios.post('http://localhost:8080/api/v1/task', task)
         alert('Add task successfully')   
+        window.location.reload()
       } catch (error) {
         console.log(error);
       }
@@ -60,6 +61,7 @@ export default function App() {
     if (conf) {
         axios.delete('http://localhost:8080/api/v1/task/' + id)
         alert(`You deleted task: ${tasks[index].name} successfully !`)
+        window.location.reload()
     }
   }
 
